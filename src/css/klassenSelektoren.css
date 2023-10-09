@@ -1,0 +1,12 @@
+.danger {
+  color: red;
+}
+.important {
+  font-weight: bold;
+}
+p.danger {
+  text-decoration: underline;
+}
+span.important {
+  background-color: gray;
+}

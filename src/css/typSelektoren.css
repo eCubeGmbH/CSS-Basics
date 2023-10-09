@@ -1,0 +1,25 @@
+/**Eltern Element für h1/**/
+
+body {
+  color: red;
+  border: 2px solid red;
+}
+
+/**Kind Element für body/**/
+
+h1 {
+  color: black;
+  border: inherit;
+}
+
+/**Eltern Element für b/**/
+span {
+  color: rgb(128, 128, 128);
+}
+
+/**Kind Element für span/**/
+b {
+  color: yellow;
+  border: inherit;
+/ / diese Eigenschaft wird nicht verebt weil Eltern Elemnet für b hat kein border / /
+}
