@@ -1,0 +1,21 @@
+<!--
+alle spans die kindElement von p
+
+-->
+
+p > span {
+  color: red;
+}
+
+p > b {
+  color: blue;
+}
+
+span > b {
+  color: yellow;
+}
+
+html > body > p > span > i {
+  color: green;
+  font-weight: bold;
+}
