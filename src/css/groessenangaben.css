@@ -1,0 +1,40 @@
+#absolut {
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    background-color: red;
+}
+/*
+Skalierbarkeit der Elemente fehlt in absoluten Größenangaben
+*/
+#prozent {
+    width: 20%;
+    height: 20%;
+    background-color: green;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-size: 20px;
+}
+/*
+prozent angabe bezieht sich auf die größe des Eltern Elements (body)
+ */
+/*
+Elemente werden skalierbar durch größenangaben in prozent
+ */
+#em {
+    font-size: 2em;
+
+}
+/*
+em bezieht sich auf größe der Schrift des eltern Elements (body)
+ */
+.em {
+    font-size: 2em;
+}
+.rem {
+    font-size: 2rem;
+}
