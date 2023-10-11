@@ -4,33 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grundlagen</title>
-    <style>
-        /* Inline CSS für minimales ästhetisches Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        article {
-            margin: 20px;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        h2 {
-            color: #555;
-        }
-        p {
-            line-height: 1.5;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="CSS-Basic-Article.css">
+
 </head>
 <!--
 Aufgabe: Diese detailliertere Gliederung verwendet HTML5-Semantik, um die Struktur des Artikels klarer zu definieren.
@@ -46,76 +21,131 @@ Bitte denke daran, die Inhalte entsprechend auszuarbeiten und das Styling zu ver
 
 <article>
     <h2>1. Einleitung</h2>
-    <p>In diesem Artikel werden die grundlegenden Konzepte von Cascading-Style-Sheets (CSS) behandelt und ihre Bedeutung in der modernen Webentwicklung erläutert.</p>
+    <p> In diesem Artikel werden die grundlegenden Konzepte von Cascading-Style-Sheets (CSS) behandelt und ihre
+        Bedeutung
+        in der modernen Webentwicklung erläutert.</p>
 </article>
 
 <article>
     <h2>2. CSS-Grundlagen</h2>
-    <p>Im zweiten Abschnitt werden die grundlegenden Konzepte von CSS, einschließlich Selektoren, Eigenschaften und Werte, ausführlich erläutert.</p>
-    <p> Selektoren sind ein wesentlicher Bestandteil von CSS und dienen dazu, HTML-Elemente auf der Webseite auszuwählen, auf die die CSS-Regeln angewendet werden sollen</p>
-    <pre>
-        &lt;p&gt;
-    </pre>
+    <h3>was sind Selektoren, Eigenschaften, Werte?</h3>
+    <p style="font-size: 17px"><strong>Selektoren sind ein wesentlicher Bestandteil von CSS und dienen dazu,
+        HTML-Elemente auf der Webseite
+        auszuwählen, auf die die CSS-Regeln angewendet werden sollen.</strong></p>
+    <p style="font-size: 17px"><strong>Eigenschaften definieren das visuelle Aussehen der ausgewählten Elemente. Jede
+        Eigenschaft hat einen Namen und
+        einen Wert.</strong></p>
+    <p style="font-size: 17px"><strong>Die Werte sind die Einstellungen, die Sie für eine bestimmte Eigenschaft
+        festlegen. </strong></p>
+
 </article>
 
 <article>
     <h2>3. Einbindung von CSS</h2>
-    <p>Dieser Abschnitt erklärt, wie CSS in HTML-Dokumente eingebunden wird, sowohl intern als auch extern, um eine klare Trennung von Inhalt und Präsentation zu ermöglichen.</p>
+    <h1>Methoden der Einbindung:</h1>
+    <p><strong>1-Interne Einbindung (Inline CSS):</strong> erfolgt innerhalb des HTML-Dokuments</p>
+    <p><strong>2-Externe Einbindung:</strong> man erstellt eine CSS Datei und verknüpft sie mit dem HTML-Dokument</p>
+    <p><strong>3-Inline-Styles:</strong> Inline-Styles werden direkt in einem HTML-Element mit dem
+        <strong>'style'</strong> Attribut definiert</p>
+
 </article>
 
 <article>
     <h2>4. CSS-Selektoren</h2>
-    <p>Hier erfahren Sie alles über die verschiedenen Arten von CSS-Selektoren, einschließlich Klassen, IDs und Elementselektoren, und wie sie verwendet werden.</p>
+    <h2 id="selektoren">Arten von Selektoren:</h2>
+    <ul>
+        <li>Element selektor</li>
+        <p>Beispiel: <strong>'p'</strong> wählt alle<strong> '&lt;p&gt;' </strong>Elemente auf der Seite aus</p>
+        <li>Klassen-Selektor</li>
+        <p>Beispiel: <strong>'.author' </strong>wählt alle Elemente mit der Klasse "author" aus</p>
+        <li>ID-Selektor</li>
+        <p>Beispiel: <strong>'#header' </strong>wählt das Element mit der ID "header" aus</p>
+        <li>Nachfahren selektor</li>
+        <p>Beispiel: <strong>'ul li' </strong>wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die sich in
+            einem<strong> '&lt;ul&gt;'</strong> Element befinden</p>
+        <li>Kind-Selektor</li>
+        <p>Beispiel: <strong>'ul > li'</strong> wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die direkte
+            Kinder eines <strong>'&lt;ul&gt;'</strong> Elements sind</p>
+        <li>Pseudo-Klassen</li>
+        <p>Beispiel: <strong>'a: hover'</strong> wählt alle <strong>'&lt;a&gt;'</strong> Elemente aus, wenn sie mit der
+            Maus überfahren</p>
+        <li>Pseudo-Elemente</li>
+        <p>Beispiel: <strong>'p::first-letter'</strong> wählt den ersten Buchstaben in einem
+            <strong>'&lt;p&gt;'</strong> Element aus</p>
+        <li>Attribut-Selektor</li>
+        <p>Beispiel: <strong>'input[type="text"]'</strong> wählt alle <strong>'&lt;input&gt;'</strong> Element mit dem
+            Attribut <strong>'type="text"'</strong> aus</p>
+        <li>Universalselektor</li>
+        <p>Beispiel: <b><strong>*</strong></b> wählt alle Elemente aus</p>
+    </ul>
+
 </article>
 
 <article>
     <h2>5. CSS-Eigenschaften und Werte</h2>
-    <p>Dieser Abschnitt bietet eine umfassende Übersicht über häufig verwendete CSS-Eigenschaften und die zugehörigen Werte.</p>
+    <p>Dieser Abschnitt bietet eine umfassende Übersicht über häufig verwendete CSS-Eigenschaften und die zugehörigen
+        Werte.</p>
 </article>
 
 <article>
     <h2>6. Styling von Text und Schriftarten</h2>
-    <p>Textformatierung und die Anpassung von Schriftarten sind Schlüsselaspekte in der CSS-Gestaltung von Webseiten, die hier ausführlich behandelt werden.</p>
+    <p>Textformatierung und die Anpassung von Schriftarten sind Schlüsselaspekte in der CSS-Gestaltung von Webseiten,
+        die hier ausführlich behandelt werden.</p>
 </article>
 
 <article>
     <h2>7. Box-Modell und Layout</h2>
-    <p>Das Box-Modell ist ein zentrales Konzept in CSS. In diesem Abschnitt lernen Sie, wie es für das Webseitenlayout genutzt wird.</p>
+    <p>Das Box-Modell ist ein zentrales Konzept in CSS. In diesem Abschnitt lernen Sie, wie es für das Webseitenlayout
+        genutzt wird.</p>
 </article>
 
 <article>
     <h2>8. Hintergründe und Farben</h2>
-    <p>Sie erfahren, wie Sie Hintergrundbilder und Farben in CSS verwenden, um das visuelle Erscheinungsbild Ihrer Webseite anzupassen.</p>
+    <p>Sie erfahren, wie Sie Hintergrundbilder und Farben in CSS verwenden, um das visuelle Erscheinungsbild Ihrer
+        Webseite anzupassen.</p>
+    <p>Hintergrund kann man mit zwei grundlegenden Arten definieren .1 background-colour .2 background-image(url)</p>
+    <p>man kann Hintergrund noch stylen und positionieren mithilfe von CSS
+        eigenschaften.background-position.background-repeat.background-attachment</p>
 </article>
 
 <article>
     <h2>9. CSS-Transitions und Animationen</h2>
-    <p>Interaktive Webseiten werden durch CSS-Übergänge und Animationen bereichert. Hier lernen Sie, wie Sie sie effektiv einsetzen.</p>
+    <p>Interaktive Webseiten werden durch CSS-Übergänge und Animationen bereichert. Hier lernen Sie, wie Sie sie
+        effektiv einsetzen.</p>
 </article>
 
 <article>
     <h2>10. Positionierung von Elementen</h2>
-    <p>Wie Sie Elemente auf einer Webseite mit CSS positionieren können, einschließlich relative, absolute und feste Positionierung.</p>
+    <p>Wie Sie Elemente auf einer Webseite mit CSS positionieren können, einschließlich relative, absolute und feste
+        Positionierung.</p>
 </article>
 
 <article>
     <h2>11. CSS Grid</h2>
     <p>Die Verwendung des CSS Grid-Layouts zur Erstellung komplexer, gleichmäßig aufgeteilter Webseitenlayouts.</p>
+    <p>Website responsive gestalten mit Grid</p>
+    <p>man eignet sich auf ein bestimmtes Gestaltungsraster mit einer bestimmten Anzahl von Spalten und columns</p>
 </article>
 
 <article>
     <h2>10. Responsive Webdesign</h2>
-    <p>Die Bedeutung des responsiven Webdesigns und wie CSS verwendet wird, um Webseiten für verschiedene Bildschirmgrößen anzupassen.</p>
+    <p>Die Bedeutung des responsiven Webdesigns und wie CSS verwendet wird, um Webseiten für verschiedene
+        Bildschirmgrößen anzupassen.</p>
+    <p>Graceful Degradation(für moderne Geräte) vs progressive Enhancement (für schwache Geräte) </p>
+    <p>Arten von Webdesign: 1. Mobile-First Webdesign 2. Responsive Webdesign (flexible passt für alle) 3. Adaptives
+        Webdesign (nicht flexible nur für beistimmte bildschirmgröße)</p>
 </article>
 
 <article>
     <h2>11. Zusammenfassung</h2>
-    <p>Eine Zusammenfassung der wichtigsten Erkenntnisse und CSS-Grundlagen, die in diesem Artikel behandelt wurden. Erarbeite ein CSS Cheat Sheet, dass dir bei deinen zukünftigen Entwicklungen als Grundlage dienen kann.</p>
+    <p>Eine Zusammenfassung der wichtigsten Erkenntnisse und CSS-Grundlagen, die in diesem Artikel behandelt wurden.
+        Erarbeite ein CSS Cheat Sheet, dass dir bei deinen zukünftigen Entwicklungen als Grundlage dienen kann.</p>
 </article>
 
 <article>
     <h2>12. Fazit</h2>
-    <p>Der Schlussabschnitt betont die Bedeutung von CSS in der modernen Webentwicklung und die Notwendigkeit, CSS-Kenntnisse zu erwerben, um erfolgreiche Webseiten zu gestalten.</p>
+    <p>Der Schlussabschnitt betont die Bedeutung von CSS in der modernen Webentwicklung und die Notwendigkeit,
+        CSS-Kenntnisse zu erwerben, um erfolgreiche Webseiten zu gestalten.</p>
 </article>
 
 <footer>

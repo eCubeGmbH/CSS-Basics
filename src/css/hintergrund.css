@@ -1,0 +1,65 @@
+div {
+    width: 600px;
+    height: 600px;
+    border: 2px solid grey;
+    margin-bottom: 20px;
+}
+
+#test1 {
+    background-color: #FF5EA2;
+}
+
+#test2 {
+    background-image: url("../html/hintergrund.png");
+}
+
+#test3 {
+    background-image: url("../html/hintergrund.png");
+    background-repeat: repeat-x;
+}
+
+#test4 {
+    background-image: url("../html/hintergrund.png");
+    background-repeat: repeat-y;
+}
+
+#test5 {
+    background-image: url("../html/hintergrund.png");
+    background-repeat: no-repeat;
+}
+
+#test6 {
+    background-image: url("../html/hintergrund.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#test7 {
+    background-image: url("../html/hintergrund.png");
+    background-repeat: no-repeat;
+    background-position: 100px 200px;
+}
+#test8 {
+    background-image: url("../html/hintergrund.png");
+    background-repeat: no-repeat;
+    background-position: right 200px bottom 300px;
+}
+#test9 {
+    background-image: url("../html/hintergrund.png");
+    background-attachment: fixed;
+}
+/*
+BISHER :
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+ */
+/*
+JETZT:
+background: color image repeat attachment position;
+ */
+#test10 {
+    background: cadetblue url("../html/hintergrund.png") no-repeat center center;
+}

@@ -1,8 +1,6 @@
-<!--
+/*
 alle spans die kindElement von p
-
--->
-
+*/
 p > span {
   color: red;
 }

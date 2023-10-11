@@ -1,0 +1,16 @@
+#test {
+    height: 400px;
+    width: 400px;
+    background-color:grey ;
+}
+
+#test::before {
+    content:" Ich bin das Pseudo Element before! ";
+    display: block;
+    background-color: red;
+}
+#test::after {
+    content:" Ich bin das Pseudo Element after! ";
+    display: block;
+    background-color: black;
+}
