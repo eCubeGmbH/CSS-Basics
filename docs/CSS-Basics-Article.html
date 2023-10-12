@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,6 @@
     <link rel="stylesheet" type="text/css" href="CSS-Basic-Article.css">
 
 </head>
-<!--
-Aufgabe: Diese detailliertere Gliederung verwendet HTML5-Semantik, um die Struktur des Artikels klarer zu definieren.
-Bitte fülle den Abschnitt mit den entsprechenden Informationen aus dem Udemy-Kurs und passe das Styling und die Inhalte
-nach Bedarf an. Verwende Code-Beispiele in deinem Artikel! Beachte auch, dass die Inline-CSS-Stile in der Realität in
-externen CSS-Dateien ausgelagert werden sollten, um eine bessere Trennung von Inhalt und Präsentation zu erreichen.
-Bitte denke daran, die Inhalte entsprechend auszuarbeiten und das Styling zu verfeinern.
--->
 <body>
 <header>
     <h1>Cascading-Style-Sheets (CSS)</h1>
@@ -29,123 +22,356 @@ Bitte denke daran, die Inhalte entsprechend auszuarbeiten und das Styling zu ver
 <article>
     <h2>2. CSS-Grundlagen</h2>
     <h3>was sind Selektoren, Eigenschaften, Werte?</h3>
-    <p style="font-size: 17px"><strong>Selektoren sind ein wesentlicher Bestandteil von CSS und dienen dazu,
+    <p><strong>Selektoren sind ein wesentlicher Bestandteil von CSS und dienen dazu,
         HTML-Elemente auf der Webseite
         auszuwählen, auf die die CSS-Regeln angewendet werden sollen.</strong></p>
-    <p style="font-size: 17px"><strong>Eigenschaften definieren das visuelle Aussehen der ausgewählten Elemente. Jede
+    <p><strong>Eigenschaften definieren das visuelle Aussehen der ausgewählten Elemente. Jede
         Eigenschaft hat einen Namen und
         einen Wert.</strong></p>
-    <p style="font-size: 17px"><strong>Die Werte sind die Einstellungen, die Sie für eine bestimmte Eigenschaft
+    <p><strong>Die Werte sind die Einstellungen, die Sie für eine bestimmte Eigenschaft
         festlegen. </strong></p>
-
 </article>
 
 <article>
     <h2>3. Einbindung von CSS</h2>
-    <h1>Methoden der Einbindung:</h1>
-    <p><strong>1-Interne Einbindung (Inline CSS):</strong> erfolgt innerhalb des HTML-Dokuments</p>
+    <h3>Methoden der Einbindung:</h3>
+    <p><strong>1-Interne Einbindung (Inline CSS):</strong> erfolgt innerhalb des HTML-Dokuments
     <p><strong>2-Externe Einbindung:</strong> man erstellt eine CSS Datei und verknüpft sie mit dem HTML-Dokument</p>
+    <pre><code>&lt;link rel="stylesheet" type="text/css" href="CSS-Basic-Article.css"&gt;</code></pre>
     <p><strong>3-Inline-Styles:</strong> Inline-Styles werden direkt in einem HTML-Element mit dem
         <strong>'style'</strong> Attribut definiert</p>
-
+    <pre><code>&lt;h1&gt; style="font-size: 70px; text-decoration: underline;">Inline CSS &lt;h1&gt;</code></pre>
 </article>
 
 <article>
     <h2>4. CSS-Selektoren</h2>
-    <h2 id="selektoren">Arten von Selektoren:</h2>
-    <ul>
-        <li>Element selektor</li>
-        <p>Beispiel: <strong>'p'</strong> wählt alle<strong> '&lt;p&gt;' </strong>Elemente auf der Seite aus</p>
-        <li>Klassen-Selektor</li>
-        <p>Beispiel: <strong>'.author' </strong>wählt alle Elemente mit der Klasse "author" aus</p>
-        <li>ID-Selektor</li>
-        <p>Beispiel: <strong>'#header' </strong>wählt das Element mit der ID "header" aus</p>
-        <li>Nachfahren selektor</li>
-        <p>Beispiel: <strong>'ul li' </strong>wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die sich in
-            einem<strong> '&lt;ul&gt;'</strong> Element befinden</p>
-        <li>Kind-Selektor</li>
-        <p>Beispiel: <strong>'ul > li'</strong> wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die direkte
-            Kinder eines <strong>'&lt;ul&gt;'</strong> Elements sind</p>
-        <li>Pseudo-Klassen</li>
-        <p>Beispiel: <strong>'a: hover'</strong> wählt alle <strong>'&lt;a&gt;'</strong> Elemente aus, wenn sie mit der
-            Maus überfahren</p>
-        <li>Pseudo-Elemente</li>
-        <p>Beispiel: <strong>'p::first-letter'</strong> wählt den ersten Buchstaben in einem
-            <strong>'&lt;p&gt;'</strong> Element aus</p>
-        <li>Attribut-Selektor</li>
-        <p>Beispiel: <strong>'input[type="text"]'</strong> wählt alle <strong>'&lt;input&gt;'</strong> Element mit dem
-            Attribut <strong>'type="text"'</strong> aus</p>
-        <li>Universalselektor</li>
-        <p>Beispiel: <b><strong>*</strong></b> wählt alle Elemente aus</p>
-    </ul>
-
+    <h3 id="selektoren">Arten von Selektoren:</h3>
+    <p><strong>Element selektor</strong></p>
+    <p>- Beispiel: <strong>'p'</strong> wählt alle<strong> &lt;p&gt; </strong>Elemente auf der Seite aus</p>
+    <p><strong>Klassen-Selektor</strong></p>
+    <p>- Beispiel: <strong>'.author' </strong>wählt alle Elemente mit der Klasse "author" aus</p>
+    <p><strong>ID-Selektor</strong></p>
+    <p>- Beispiel: <strong>'#header' </strong>wählt das Element mit der ID "header" aus</p>
+    <p><strong>Nachfahren selektor</strong></p>
+    <p>- Beispiel: <strong>'ul li' </strong>wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die sich in
+        einem<strong> '&lt;ul&gt;'</strong> Element befinden
+    </p>
+    <p><strong>Kind-Selektor</strong></p>
+    <p>- Beispiel: <strong>'ul > li'</strong> wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die direkte
+        Kinder eines <strong>'&lt;ul&gt;'</strong> Elements sind
+    </p>
+    <p><strong>Pseudo-Klassen</strong></p>
+    <p>- Beispiel: <strong>'a: hover'</strong> wählt alle <strong>'&lt;a&gt;'</strong> Elemente aus, wenn sie mit
+        der
+        Maus überfahren
+    </p>
+    <p><strong>Pseudo-Elemente</strong></p>
+    <p>- Beispiel: <strong>'p::first-letter'</strong> wählt den ersten Buchstaben in einem
+        <strong>'&lt;p&gt;'</strong> Element aus
+    </p>
+    <p><strong>Attribut-Selektor</strong></p>
+    <p>Beispiel: <strong>'input[type="text"]'</strong> wählt alle <strong>'&lt;input&gt;'</strong> Element mit dem
+        Attribut <strong>'type="text"'</strong> aus
+    </p>
+    <p><strong>Universalselektor</strong></p>
+    <p>- Beispiel: <b><strong>*</strong></b> wählt alle Elemente aus</p>
 </article>
 
 <article>
     <h2>5. CSS-Eigenschaften und Werte</h2>
-    <p>Dieser Abschnitt bietet eine umfassende Übersicht über häufig verwendete CSS-Eigenschaften und die zugehörigen
-        Werte.</p>
+    <h3>Häufig verwendete CSS-Eigenschaften und ihre Werte:</h3>
+    <p><strong><u>- Text-Stile:</u></strong></p>
+    <p><strong>color:</strong> Legt die Textfarbe fest. Beispiel: color: #333;.</p>
+    <p><strong>font-family:</strong> Definiert die Schriftart. Beispiel: font-family: Arial, sans-serif;</p>
+    <p><strong>font-size:</strong> Setzt die Schriftgröße. Beispiel: font-size: 16px;.</p>
+    <p><strong>font-weight:</strong> Steuert die Schriftgewichtung, z. B. bold für Fettschrift.</p>
+    <p><strong><u>- Hintergrundgestaltung:</u></strong></p>
+    <p><strong>background-color: </strong>Bestimmt die Hintergrundfarbe. Beispiel: background-color: #f0f0f0;.</p>
+    <p><strong>background-repeat: </strong>Definiert, wie das Hintergrundbild wiederholt wird, z. B. no-repeat.</p>
+    <p><strong>background-size: </strong>Steuert die Größe des Hintergrundbildes, z. B. cover oder contain.</p>
+    <p><strong><u>- Abstände:</u></strong></p>
+    <p><strong>margin:</strong> setzt den äußeren Abstand eines Elements. Beispiel: margin: 10px;.</p>
+    <p><strong>padding:</strong> Legt den inneren Abstand eines Elements fest. Beispiel: padding: 20px;.</p>
+    <p><strong>border:</strong> Definiert die Eigenschaften des Elementrahmens. Beispiel: border: 1px solid #ccc;</p>
+    <p><strong><u>- Positionierung und Layout:</u></strong></p>
+    <p><strong>position: </strong>Steuert die Positionierung eines Elements, z. B. relative oder absolute.</p>
+    <p><strong>display: </strong>Legt das Anzeigeverhalten eines Elements fest, z. B. block, inline, flex.</p>
+    <p><strong>float: </strong>Erlaubt das Schweben eines Elements links oder rechts im Layout.</p>
+    <p><strong><u>- Textausrichtung und -formatierung:</u></strong></p>
+    <p><strong>text-align: </strong>Bestimmt die horizontale Ausrichtung von Text, z. B. center oder right.</p>
+    <p><strong>line-height: </strong>Setzt die Zeilenhöhe (Zeilenabstand) fest. Beispiel: line-height: 1.5;.</p>
+    <p><strong>text-transform: </strong>Ändert den Text in Großbuchstaben, Kleinbuchstaben oder Kapitälchen.</p>
+    <p><strong><u>- Schriftart und Textdekoration:</u></strong></p>
+    <p><strong>font-style: </strong>Steuert die Schriftart, z. B. italic für Kursivschrift.</p>
+    <p><strong>text-decoration: </strong>Ermöglicht die Hinzufügung von Unterstreichungen, durch streichungen usw.</p>
+    <p><strong><u>- Box-Modell:</u></strong></p>
+    <p><strong>width und height: </strong>Definieren die Breite und Höhe eines Elements.</p>
+    <p><strong>margin, padding, und border: </strong>bestimmen das Box-Modell eines Elements.</p>
+    <p><strong><u>- Farbe- und Oazitätseigenschaften:</u></strong></p>
+    <p><strong>opacity: </strong>Legt die Transparenz eines Elements fest. Beispiel: opacity: 0.7;.</p>
+    <p><strong>background-opacity: </strong>Definiert die Transparenz des Hintergrunds. Beispiel:
+    <pre><code> background-color: rgba(255, 0, 0, 0.5);.</code></pre>
+    <p><strong><u>- Listen-Styles:</u></strong></p>
+    <p><strong>list-style-type: </strong>Bestimmt den Stil der Listenmarker (Punkte, Zahlen, usw.). Beispiel:
+    <pre><code>list-style-type: disc;</code></pre>
+    <p><strong><u>- Textschatten und Boxschatten:</u></strong></p>
+    <p><strong>text-shadow: </strong>Fügt Textschatten hinzu, um Text hervorzuheben.</p>
+    <p><strong>box-shadow: </strong>Erzeugt Schatten um ein Element, um Tiefe zu erzeugen.</p>
+
 </article>
 
 <article>
     <h2>6. Styling von Text und Schriftarten</h2>
     <p>Textformatierung und die Anpassung von Schriftarten sind Schlüsselaspekte in der CSS-Gestaltung von Webseiten,
         die hier ausführlich behandelt werden.</p>
+    <h3>Textformatierung:</h3>
+    <p><strong><u>1- font-family:</u></strong></p>
+    <pre><code>#test1 {font-family: serif;}</code></pre>
+    <pre><code>#test2 {font-family: sans-serif;}</code></pre>
+    <pre><code>#test3 {font-family: cursive;}</code></pre>
+    <p><strong><u>2- font-size:</u></strong></p>
+    <pre><code>font-size: 16px;</code></pre>
+    <p><strong><u>3- font-weight:</u></strong></p>
+    <pre><code>font-weight: bold;</code></pre>
+    <pre><code>font-weight: italic;</code></pre>
+    <h3>Schriftanpassung:</h3>
+    <p><strong><u>1- color:</u></strong></p>
+    <pre><code>color: #333;</code></pre>
+    <p><strong><u>2- text-align::</u></strong></p>
+    <pre><code>text-align: center;</code></pre>
+    <p><strong><u>3- line-height:</u></strong></p>
+    <pre><code>line-height: 1.5;</code></pre>
+    <p><strong><u>4- text-decoration::</u></strong></p>
+    <pre><code>text-decoration: underline;</code></pre>
+    <p><strong><u>5- text-transform:</u></strong></p>
+    <pre><code>text-transform: uppercase;</code></pre>
+
+
 </article>
 
 <article>
     <h2>7. Box-Modell und Layout</h2>
-    <p>Das Box-Modell ist ein zentrales Konzept in CSS. In diesem Abschnitt lernen Sie, wie es für das Webseitenlayout
-        genutzt wird.</p>
+    <p><strong>Das Box-Modell ist ein zentrales Konzept in CSS. Es beschreibt, wie jedes HTML-Element als Rechteck oder
+        "Box" betrachtet wird, und wie der Inhalt, die
+        Innenabstände (Padding), der Rahmen (Border) und die Außenabstände (Margin) dieser Box gestaltet
+        werden.</strong></p>
+    <p></p>
+    <div class="first">
+        Box-Modell
+        <br>
+        Hier kommt Inhalt:
+    </div>
+    <pre>
+        <code>
+            div {
+  background-color: grey;
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  margin: 100px;
+  border: 20px solid black;
+}
+        </code>
+    </pre>
+
 </article>
 
 <article>
     <h2>8. Hintergründe und Farben</h2>
-    <p>Sie erfahren, wie Sie Hintergrundbilder und Farben in CSS verwenden, um das visuelle Erscheinungsbild Ihrer
-        Webseite anzupassen.</p>
-    <p>Hintergrund kann man mit zwei grundlegenden Arten definieren .1 background-colour .2 background-image(url)</p>
-    <p>man kann Hintergrund noch stylen und positionieren mithilfe von CSS
-        eigenschaften.background-position.background-repeat.background-attachment</p>
+    <p><strong>Hintergrund kann man mit zwei grundlegenden Arten definieren .1 background-colour .2
+        background-image(url)</strong></p>
+    <p><strong>man kann Hintergrund noch stylen und positionieren mithilfe von CSS
+        eigenschaften.background-position.background-repeat.background-attachment</strong></p>
+    <pre><code>body {
+    background-color: #add8e6;
+}</code></pre>
+    <pre><code>
+    background-image: url('header-background.jpg'); <strong>/* URL zum Hintergrundbild */</strong>
+    background-size: cover;                         <strong>/* Passen Sie das Bild an die Box an */</strong>
+    background-repeat: no-repeat;                   <strong>/* Keine Wiederholung des Bildes */</strong>
+    background-position: center;                    <strong>/* Zentrieren des Bildes */</strong>
+    </code></pre>
 </article>
 
 <article>
     <h2>9. CSS-Transitions und Animationen</h2>
-    <p>Interaktive Webseiten werden durch CSS-Übergänge und Animationen bereichert. Hier lernen Sie, wie Sie sie
-        effektiv einsetzen.</p>
+    <p><strong>Die Verwendung von CSS-Transitions und Animationen ist eine großartige Möglichkeit, um Interaktivität und
+        visuelle Anziehungskraft in Webseiten zu integrieren.</strong></p>
+    <h3>Transitions</h3>
+    <p><strong><u>1- Ausgangszustand:</u></strong></p>
+    <p>Zuerst sollten Sie den normalen Zustand Ihrer Elemente definieren. Dies könnte beispielsweise der Standard-Stil
+        eines Buttons sein.</p>
+    <p><strong><u>2- Änderungszustand:</u></strong></p>
+    <p>Wenn der Benutzer interagiert (z. B. Mauszeiger über den Button), ändern Sie die CSS-Eigenschaften des Elements,
+        die Sie animieren möchten.</p>
+    <p><strong><u>3- Fügen Sie die Transition hinzu:</u></strong></p>
+    <p>Verwenden Sie die transition-Eigenschaft, um zu definieren, welche Eigenschaften übertragen werden sollen und wie
+        lange die Animation dauern soll.</p>
+    <p>Beispiel:</p>
+    <pre><code><strong>
+    .button {
+    background-color: #3498db;                          /* Ausgangszustand */
+    color: #fff;                                        /* Ausgangszustand */
+    transition: background-color 0.3s, color 0.3s;      /* Transition für Hintergrundfarbe und Textfarbe */
+}
+
+    .button:hover {
+    background-color: #2980b9;                          /* Änderungszustand */
+    color: #eee;                                        /* Änderungszustand */
+}</strong></code></pre>
+    <h3>CSS-Animationen</h3>
+    <p><strong><u>1- Animation Planen:</u></strong></p>
+    <p>Überlegen Sie sich, was genau animiert werden soll und welche Schritte die Animation haben soll. Dies kann
+        Bewegungen, Farbänderungen oder Transformationen umfassen.</p>
+    <p><strong><u>2- Keyframes Definieren:</u></strong></p>
+    <p>Verwenden Sie <strong>@keyframes</strong>, um die verschiedenen Zustände oder Schritte der Animation zu
+        definieren. Sie können den Anfangs- und endzustand sowie Zwischenzustände festlegen.</p>
+    <p>Beispiel:</p>
+    <pre><code><strong>
+        @keyframes slide-in {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
+}
+    </strong></code></pre>
+    <p><strong><u>3- Animation Anwenden</u></strong></p>
+    <p>Beispiel:</p>
+    <pre>
+        <code>
+    .element {
+    animation: slide-in 1s ease-out 0.5s both;
+            <strong>/* Animation "slide-in" mit 1 Sekunde Dauer, 0.5 Sekunden Verzögerung und Ease-Out-Beschleunigungsfunktion */}</strong>
+        </code>
+    </pre>
+
+
 </article>
 
 <article>
     <h2>10. Positionierung von Elementen</h2>
-    <p>Wie Sie Elemente auf einer Webseite mit CSS positionieren können, einschließlich relative, absolute und feste
-        Positionierung.</p>
+    <p><strong><u>1- Static Position (Statische Position):</u></strong></p>
+    <pre>
+        <code>
+           .element {
+    position: static;
+}
+        </code>
+    </pre>
+    <p><strong><u>2- Relative Position (Relative Position):</u></strong></p>
+    <pre>
+        <code>
+            .element {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+        </code>
+    </pre>
+    <p><strong><u>3- Absolute Position (Absolute Position):</u></strong></p>
+    <pre>
+        <code>
+            .element {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+        </code>
+    </pre>
+    <p><strong><u>4- Fixed Position (Feste Position):</u></strong></p>
+    <pre>
+        <code>
+            .element {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+        </code>
+    </pre>
+    <p><strong><u>5- Sticky Position (Haftende Position):</u></strong></p>
+    <pre>
+        <code>
+        .element {
+    position: sticky;
+    top: 20px;
+}
+        </code>
+    </pre>
 </article>
 
 <article>
     <h2>11. CSS Grid</h2>
-    <p>Die Verwendung des CSS Grid-Layouts zur Erstellung komplexer, gleichmäßig aufgeteilter Webseitenlayouts.</p>
-    <p>Website responsive gestalten mit Grid</p>
-    <p>man eignet sich auf ein bestimmtes Gestaltungsraster mit einer bestimmten Anzahl von Spalten und columns</p>
+    <p><strong>Die Verwendung des CSS Grid-Layouts zur Erstellung komplexer, gleichmäßig aufgeteilter
+        Webseitenlayouts.</strong></p>
+    <p><strong>Website responsive gestalten mit Grid</strong></p>
+    <p><strong>man eignet sich auf ein bestimmtes Gestaltungsraster mit einer bestimmten Anzahl von Spalten und
+        columns</strong></p>
+    <img src="Grid.png" alt="Grid">
+    <pre>
+        <code>
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+        </code>
+    </pre>
 </article>
 
 <article>
     <h2>10. Responsive Webdesign</h2>
-    <p>Die Bedeutung des responsiven Webdesigns und wie CSS verwendet wird, um Webseiten für verschiedene
-        Bildschirmgrößen anzupassen.</p>
-    <p>Graceful Degradation(für moderne Geräte) vs progressive Enhancement (für schwache Geräte) </p>
-    <p>Arten von Webdesign: 1. Mobile-First Webdesign 2. Responsive Webdesign (flexible passt für alle) 3. Adaptives
-        Webdesign (nicht flexible nur für beistimmte bildschirmgröße)</p>
+    <p><strong>- Die Bedeutung des responsiven Webdesigns und wie CSS verwendet wird, um Webseiten für verschiedene
+        Bildschirmgrößen anzupassen.</strong></p>
+    <p><strong>- Graceful Degradation(für moderne Geräte) vs progressive Enhancement (für schwache Geräte) </strong></p>
+    <p><strong>- Arten von Webdesign: 1. Mobile-First Webdesign 2. Responsive Webdesign (flexible passt für alle) 3.
+        Adaptives
+        Webdesign (nicht flexible nur für beistimmte bildschirmgröße)</strong></p>
 </article>
 
 <article>
     <h2>11. Zusammenfassung</h2>
-    <p>Eine Zusammenfassung der wichtigsten Erkenntnisse und CSS-Grundlagen, die in diesem Artikel behandelt wurden.
-        Erarbeite ein CSS Cheat Sheet, dass dir bei deinen zukünftigen Entwicklungen als Grundlage dienen kann.</p>
+    <p><strong><u>CSS (Cascading Style Sheets):</u></strong></p>
+    <p>CSS ist eine Gestaltungssprache, die zur Steuerung des visuellen Erscheinungsbilds von Webseiten verwendet wird.
+        Es ermöglicht die Trennung von Inhalt und Präsentation.</p>
+    <p><strong><u>Notwendigkeit von CSS-Kenntnissen: </u></strong></p>
+    <p>CSS-Kenntnisse sind entscheidend, um erfolgreiche Webseiten zu gestalten. Sie ermöglichen es, ansprechende
+        Designs zu erstellen, die benutzerfreundlich und funktional sind.
+        Diese Grundlagen bilden das Fundament für die Arbeit in der Webentwicklung und Webgestaltung. Mit CSS kann man
+        die visuelle Darstellung seine Webprojekte maßgeblich beeinflussen und die Benutzererfahrung optimieren.</p>
 </article>
 
 <article>
     <h2>12. Fazit</h2>
-    <p>Der Schlussabschnitt betont die Bedeutung von CSS in der modernen Webentwicklung und die Notwendigkeit,
-        CSS-Kenntnisse zu erwerben, um erfolgreiche Webseiten zu gestalten.</p>
+    <p><strong><u>Gestaltung und Präsentation:</u></strong></p>
+    <p>CSS ermöglicht die Trennung von Inhalt und Präsentation. Mit CSS können Webdesigner das visuelle Erscheinungsbild
+        einer Website steuern, einschließlich Layout, Farben, Schriftarten und Abstände. Dies führt zu ansprechenden und
+        ästhetischen Webseiten.</p>
+    <p><strong><u>Responsive Webdesign:</u></strong></p>
+    <p>Mit CSS können Sie responsive Webseiten erstellen, die sich automatisch an verschiedene Bildschirmgrößen und
+        Geräte anpassen. Dies ist heute unerlässlich, da immer mehr Menschen von Mobilgeräten aus auf das Internet
+        zugreifen.</p>
+    <p><strong><u>Konsistenz und Wartbarkeit:</u></strong></p>
+    <p>CSS ermöglicht die Erstellung von konsistenten Stilen und Layouts auf einer Website. Änderungen in der Gestaltung
+        können schnell und einfach in einem zentralen Stylesheet vorgenommen werden, wodurch die Wartung erleichtert
+        wird.</p>
+    <p><strong><u>Barrierefreiheit:</u></strong></p>
+    <p>Durch die Verwendung von CSS können Sie barrierefreie Webseiten erstellen, die für Menschen mit unterschiedlichen
+        Fähigkeiten und Bedürfnissen zugänglich sind. Sie können beispielsweise die Schriftgröße anpassen oder Kontraste
+        erhöhen, um die Lesbarkeit zu verbessern.</p>
+    <p><strong><u>SEO (Suchmaschinenoptimierung):</u></strong></p>
+    <p>CSS spielt eine Rolle bei der SEO. Suchmaschinen bevorzugen gut strukturierte, semantische HTML und sauberen
+        Code. Durch die Verwendung von CSS können Sie Ihre Website suchmaschinenfreundlicher gestalten.</p>
+    <p><strong><u>Interaktivität:</u></strong></p>
+    <p>CSS kann zusammen mit JavaScript für Interaktivität und Animationen verwendet werden. Dies bietet den Benutzern
+        eine ansprechende und reaktionsschnelle Erfahrung auf der Website.</p>
+    <p><strong><u>Browserkompatibilität:</u></strong></p>
+    <p>CSS hilft dabei, sicherzustellen, dass Ihre Website in verschiedenen Webbrowsern konsistent und korrekt gerendert
+        wird. Es bietet Mechanismen zur Behandlung von Browser unterschieden und zur Umgehung von
+        Inkompatibilitäten.</p>
+    <p><strong><u>Designanpassungen:</u></strong></p>
+    <p>Mit CSS können Benutzer eigene Designanpassungen vornehmen, beispielsweise die Wahl des Farbschemas oder die
+        Anpassung der Schriftgröße. Dies trägt zur Benutzerzufriedenheit bei.</p>
+
 </article>
 
 <footer>
