@@ -9,7 +9,11 @@
 </head>
 <body>
 <header>
-    <h1>Cascading-Style-Sheets (CSS)</h1>
+    <div class="main-header">
+        <h1 class="h1-header">Cascading-Style-Sheets (CSS)</h1>
+        <div class="container-main-header"></div>
+    </div>
+
 </header>
 
 <article>
@@ -39,7 +43,7 @@
     <p><strong>2-Externe Einbindung:</strong> man erstellt eine CSS Datei und verknüpft sie mit dem HTML-Dokument</p>
     <pre><code>&lt;link rel="stylesheet" type="text/css" href="CSS-Basic-Article.css"&gt;</code></pre>
     <p><strong>3-Inline-Styles:</strong> Inline-Styles werden direkt in einem HTML-Element mit dem
-        <strong>'style'</strong> Attribut definiert</p>
+        <strong>style</strong> Attribut definiert</p>
     <pre><code>&lt;h1&gt; style="font-size: 70px; text-decoration: underline;">Inline CSS &lt;h1&gt;</code></pre>
 </article>
 
@@ -49,29 +53,29 @@
     <p><strong>Element selektor</strong></p>
     <p>- Beispiel: <strong>'p'</strong> wählt alle<strong> &lt;p&gt; </strong>Elemente auf der Seite aus</p>
     <p><strong>Klassen-Selektor</strong></p>
-    <p>- Beispiel: <strong>'.author' </strong>wählt alle Elemente mit der Klasse "author" aus</p>
+    <p>- Beispiel:<strong> .author </strong>wählt alle Elemente mit der Klasse "author" aus</p>
     <p><strong>ID-Selektor</strong></p>
     <p>- Beispiel: <strong>'#header' </strong>wählt das Element mit der ID "header" aus</p>
     <p><strong>Nachfahren selektor</strong></p>
-    <p>- Beispiel: <strong>'ul li' </strong>wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die sich in
-        einem<strong> '&lt;ul&gt;'</strong> Element befinden
+    <p>- Beispiel: <strong>ul li </strong>wählt alle <strong>&lt;li&gt;</strong> Elemente aus, die sich in
+        einem<strong> &lt;ul&gt;</strong> Element befinden
     </p>
     <p><strong>Kind-Selektor</strong></p>
-    <p>- Beispiel: <strong>'ul > li'</strong> wählt alle <strong>'&lt;li&gt;'</strong> Elemente aus, die direkte
-        Kinder eines <strong>'&lt;ul&gt;'</strong> Elements sind
+    <p>- Beispiel: <strong>ul > li</strong> wählt alle <strong>&lt;li&gt;</strong> Elemente aus, die direkte
+        Kinder eines <strong>&lt;ul&gt;</strong> Elements sind
     </p>
     <p><strong>Pseudo-Klassen</strong></p>
-    <p>- Beispiel: <strong>'a: hover'</strong> wählt alle <strong>'&lt;a&gt;'</strong> Elemente aus, wenn sie mit
+    <p>- Beispiel: <strong>a: hover</strong> wählt alle <strong>&lt;a&gt;</strong> Elemente aus, wenn sie mit
         der
         Maus überfahren
     </p>
     <p><strong>Pseudo-Elemente</strong></p>
-    <p>- Beispiel: <strong>'p::first-letter'</strong> wählt den ersten Buchstaben in einem
-        <strong>'&lt;p&gt;'</strong> Element aus
+    <p>- Beispiel: <strong>p::first-letter</strong> wählt den ersten Buchstaben in einem
+        <strong>&lt;p&gt;</strong> Element aus
     </p>
     <p><strong>Attribut-Selektor</strong></p>
-    <p>Beispiel: <strong>'input[type="text"]'</strong> wählt alle <strong>'&lt;input&gt;'</strong> Element mit dem
-        Attribut <strong>'type="text"'</strong> aus
+    <p>Beispiel: <strong>input[type="text"]</strong> wählt alle <strong>&lt;input&gt;</strong> Element mit dem
+        Attribut <strong>type="text"</strong> aus
     </p>
     <p><strong>Universalselektor</strong></p>
     <p>- Beispiel: <b><strong>*</strong></b> wählt alle Elemente aus</p>
@@ -375,7 +379,10 @@
 </article>
 
 <footer>
-    <p>&copy; 2023 Adel Kharbout</p>
+    <div class="section-border"></div>
+    <section>
+        <p class="footer">&copy; 2023 Adel Kharbout</p>
+    </section>
 </footer>
 </body>
 </html>
