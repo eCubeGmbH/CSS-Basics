@@ -78,6 +78,77 @@
     </p>
     <p><strong>Universalselektor</strong></p>
     <p>- Beispiel: <b><strong>*</strong></b> wählt alle Elemente aus</p>
+    <h3 id="Gewichtung">CSS Spezifität - die Gewichtung :</h3>
+    <p>Die CSS-Spezifität hilft dabei, die Gewichtung von CSS Selektoren zu verstehen und zu bestimmen.<br> So können
+        wir
+        einfacher Ursachen erkennen, warum ein Style, den wir grade vermeintlich auf ein Element angewendet haben, nicht
+        zum Tragen kommt.</p>
+    <p><strong>_Wert 1000: </strong>Inline-Stile haben die höchste Spezifität. Sie
+        werden direkt im HTML-Element festgelegt und haben Vorrang vor anderen Stilen. </p>
+    <p><strong>_Wert 100: </strong>ID-Selektoren haben eine Spezifität von 100.</p>
+    <p><strong>_Wert 10: </strong>Klassen, Pseudo-Klassen und Attribut-Selektoren haben eine Spezifität von 10.</p>
+    <p><strong>_Wert 1: </strong>Element-Selektoren und Pseudo-Elemente haben eine Spezifität von 1.</p>
+    <p><strong>_Wert 0: </strong>Universalselektoren (*), Kombinatoren und die Kommaseparierung von Selektoren haben
+        eine Spezifität von 0 und tragen normalerweise nicht zur Spezifität bei.</p>
+    <p>Wenn mehrere Regeln auf dasselbe Element angewendet werden, wird die Regel mit der höchsten Spezifität
+        angewendet. Wenn die Spezifitäten gleich sind, wird die Reihenfolge der Regeln im Stylesheet berücksichtigt,
+        wobei die späteren Regeln Vorrang haben.</p>
+
+    <table class="table1">
+        <thead>
+        <tr>
+            <th>Selektor</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>Spezifität</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>inline Style Attribute</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1 - 0 - 0 - 0</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0 - 1 - 0 - 0</td>
+        </tr>
+        <tr>
+            <td>Klasse | Pseudoklasse | Attribute Selektor</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0 - 0 - 1 - 0</td>
+        </tr>
+        <tr>
+            <td>Elemente&nbsp;| Pseudoelemente</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0 - 0 - 0 - 1</td>
+        </tr>
+        <tr>
+            <td>* (Universal Selektor)</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0 - 0 - 0 - 0</td>
+        </tr>
+        </tbody>
+    </table>
+
 </article>
 
 <article>

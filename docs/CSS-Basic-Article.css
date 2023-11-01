@@ -56,6 +56,12 @@ article {
     padding: 20px;
 }
 
+#Gewichtung {
+    text-decoration: underline red;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 7px;
+}
+
 .h1-header {
     font-size: 30px;
     color: darkred;
@@ -114,3 +120,29 @@ code {
     display: block;
     white-space: pre-wrap
 }
+
+.table1 {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table1 thead tr {
+    background-color: red;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table1 th, td {
+    padding: 12px 15px;
+}
+
+.table1 tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
